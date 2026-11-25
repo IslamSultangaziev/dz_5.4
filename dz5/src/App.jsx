@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { QUOTES } from './data/quotes'
-import './App.css'
+import styles from './App.module.css'
 
 function getRandomQuote() {
   return QUOTES[Math.floor(Math.random() * QUOTES.length)]
 }
 
-function App() {
+export const App = () => {
   const [quote, setQuote] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -29,24 +29,24 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <div className="quote-card">
-        <h1 className="quote-card__title">💬 Случайная цитата</h1>
+    <div className={styles.app}>
+      <div className={styles.quote_card}>
+        <h1 className={styles.quote_card__title}>💬 Случайная цитата</h1>
 
         {loading ? (
-          <div className="quote-card__loading">
-            <span className="spinner" />
+          <div className={styles.quote_card__loading}>
+            <span className={styles.spinner} />
             <p>Загрузка…</p>
           </div>
         ) : (
           <>
-            <blockquote className="quote-card__text">
+            <blockquote className={styles.quote_card__text}>
               «{quote.text}»
             </blockquote>
-            <p className="quote-card__author">— {quote.author}</p>
+            <p className={styles.quote_card__author}>— {quote.author}</p>
 
             <button
-              className="quote-card__btn"
+              className={styles.quote_card__btn}
               onClick={handleNewQuote}
             >
               🎲 Показать другую цитату
@@ -57,5 +57,3 @@ function App() {
     </div>
   )
 }
-
-export default App

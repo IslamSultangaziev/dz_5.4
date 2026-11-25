@@ -10,7 +10,7 @@
     #0f172a;
 }
 
-.quote-card {
+.quote_card {
   width: 100%;
   max-width: 600px;
   padding: 48px 40px;
@@ -38,7 +38,7 @@
   }
 }
 
-.quote-card__title {
+.quote_card__title {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -48,8 +48,7 @@
   color: transparent;
 }
 
-/* --- Цитата --- */
-.quote-card__text {
+.quote_card__text {
   font-size: clamp(20px, 3vw, 28px);
   line-height: 1.5;
   font-weight: 500;
@@ -58,15 +57,14 @@
   animation: fadeIn 0.4s ease-out;
 }
 
-.quote-card__author {
+.quote_card__author {
   font-size: 16px;
   color: #a78bfa;
   font-weight: 600;
   animation: fadeIn 0.4s ease-out;
 }
 
-/* --- Кнопка --- */
-.quote-card__btn {
+.quote_card__btn {
   margin-top: 8px;
   padding: 14px 28px;
   border: none;
@@ -79,17 +77,16 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.quote-card__btn:hover {
+.quote_card__btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(167, 139, 250, 0.4);
 }
 
-.quote-card__btn:active {
+.quote_card__btn:active {
   transform: translateY(0) scale(0.98);
 }
 
-/* --- Загрузка --- */
-.quote-card__loading {
+.quote_card__loading {
   display: flex;
   flex-direction: column;
   align-items: center;
